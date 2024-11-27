@@ -1,7 +1,7 @@
 import type { User } from "@/types/user";
 
 const getUsers = async (): Promise<User[]> => {
-  return fetch("http://localhost:3000/api/users", {
+  return fetch(`${process.env.NEXT_PUBLIC_API_URL}/users`, {
     cache: "force-cache",
   }).then((response) => response.json());
 };

@@ -1,6 +1,8 @@
 import getUsers from "@/features/user/api/get-users";
 import Link from "next/link";
 
+export const dynamic = "force-dynamic";
+
 const UserPage = async () => {
   const users = await getUsers();
 
